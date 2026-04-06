@@ -5,7 +5,7 @@ from tkinter import scrolledtext
 
 def interpret():
     output.delete("1.0", "end")
-    #GRISC cpu simulator
+    #GISC cpu simulator
     contents = []
     file = inputf.get("1.0", tk.END)
     file = file.split('\n')

@@ -1,5 +1,5 @@
-#GRISC cpu simulator
-#GRISC V1
+#GISC cpu simulator
+#GISC V1
 #Codename - Lancaster
 
 r1 = 0
