@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <title>GISC - General Instruction Set Computer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="gisc.ico">
+</head>
+<body>
+    <section class="header">
+        <h1>GISC</h1>
+        <p>General Instruction Set Computer</p>
+        <p>Created by Adam Gillion</p>
+    </section>
+    <section class="info">
+        <h1>What is GISC</h1>
+        <p>GISC (pronounced "Jee-isc") stands for General Instruction Set Computer and is a custom Instruction Set Architecture (ISA).</p>
+        <p>GISC offers a unique instruction set with a rich control flow and a hybrid architecture between RISC and CISC.</p>
+    </section>
+    <section class="info">
+        <h1>Current GISC version</h1>
+        <p>The current GISC version is: GISC-1</p>
+        <h1>Features:</h1>
+        <ul>
+            <li>16-bit instruction format</li>
+            <li>5 general-purpose registers (including accumulator)</li>
+            <li>256 bytes of memory</li>
+            <li>Fully working hardware CPU (Logisim)</li>
+            <li>Software interpreter (Python)</li>
+            <li>Rich control flow:</li>
+            <li> - JMP, JZ, JP, JN</li>
+            <li> - COM (compare + branch)</li>
+            <li> - GOTO (counted loop instruction)</li>
+        </ul>
+    </section>
+    <section class="info">
+        <h1>Plans for GISC-2 and the future of GISC</h1>
+        <ul>
+            <li>Other - Real hardware implementation of a GISC cpu</li>
+            <li>GISC-2 - 64 bit instructions</li>
+            <li>GISC-2 - More registers</li>
+            <li>GISC-? - Multiple GOTO tracking</li>
+        </ul>
+    </section>
+    <section class="info">
+        <h1>GISC opcodes</h1>
+        <p>As of GISC-1 these are the available GISC instructions:</p>
+        <ol>
+            <li>Load [opcode][register][literal value (2 hexadecimals)]</li>
+            <li>ADD [opcode][emptyspace][register1][register2]</li>
+            <li>SUB [opcode][emptyspace][minuend][subtrahend]</li>
+            <li>MOV [opcode][emptyspace][destination][source]</li>
+            <li>LOADM [opcode][emptyspace][memoryaddr][registersource]</li>
+            <li>JMP [opcode][emptyspace][address(2 bytes)]</li>
+            <li>JZ [opcode][register][address(2 bytes)]</li>
+            <li>JP [opcode][register][address(2 bytes)]</li>
+            <li>JN [opcode][register][address(2 bytes)]</li>
+            <li>COM [opcode][address][register1][register2]</li>
+            <li>GOTO [opcode][address (2 bytes)][times to loop]</li>
+            <li>SAVEM [opcode][emptyspace][destinationregister][sourcememoryaddr]</li>
+            <li>HLT [opcode][emptyspace (3 bytes)]</li>
+        </ol>
+    </section>
+    <section class="info">
+        <h1>Example GISC instruction usage</h1>
+        <p>This example usage of GISC-1 instructions:</p>
+        <ol>
+            <li>1309 - Load the value 9 into register 3</li>
+            <li>2001 - Add together the contents of register 0 (ACC) and register 1</li>
+            <li>3021 - Subtract the contents of register 1 from register 2</li>
+            <li>4040 - Move the contents of register 0 (ACC) to register 4</li>
+            <li>502c - Copy the contents of memory address 12 to register 2</li>
+            <li>6050 - Jump to ROM address</li>
+            <li>7360 - If register 3 == 0, jump to line 60 (hexadecimal, literal is 96)</li>
+            <li>8370 - If register 3 is positive, jump to line 70</li>
+            <li>9380 - If register 3 is negative, jump to line 80</li>
+            <li>af32 - If register 3 = register 2 goto line 15 (f)</li>
+            <li>b2a4 - GOTO line 2a, 4 times</li>
+            <li>c0c3 - Save the contents of register 3 to memory address 12</li>
+            <li>d*** - Halt all processes (*** = any number can go here)</li>
+        </ol>
+    </section>
+    <section class="info">
+        <h1>GISC implementations</h1>
+        <div class="links">
+            <div class="link"><a href="https://github.com/the-adam-g/GISC/blob/main/Interpreter%20and%20Assembler/Versions/V2/GISC.py" download><p>GISC simulator and assembler - Python version</p></a></div>
+            <div class="link"><a href="https://github.com/the-adam-g/GISC/blob/main/Interpreter%20and%20Assembler/Versions/V2/GISC.exe" download><p>GISC simulator and assembler - Windows exe</p></a></div> 
+            <div class="link"><a href="https://github.com/the-adam-g/GISC/blob/main/Logisim/Circuits/GISC-1.circ" download><p>GISC logisim circuit (.circ)</p></a></div> 
+        </div>
+    </section>
+</body>
