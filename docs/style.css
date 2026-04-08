@@ -24,6 +24,9 @@ a {
 li {
     font-size: 24px;
 }
+video {
+    max-width: 100% !important;
+}
 .link {
     background-color: rgb(219, 219, 219);
     margin-top: 0.5%;
