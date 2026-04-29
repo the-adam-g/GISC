@@ -31,6 +31,7 @@ All instructions are 16 bits:
 <li>11 - GOTO [opcode][address (2 bytes)][times to loop]</li>
 <li>12 - SAVEM [opcode][emptyspace][register][memoryaddr]</li>
 <li>13 - HLT</li>
+<li>14 - OUT [opcode][emptyspace][emptyspace][register]</li>
 </ul>
 
 <h2>Example usage</h2>
@@ -48,4 +49,5 @@ All instructions are 16 bits:
 <li>b2a4 - GOTO line 2a, 4 times</li>
 <li>c0c3 - Save the contents of register 3 to memory address 12</li>
 <li>d*** - Halt all processes (*** = any number can go here)</li>
+<li>e**1 - Output the value in register 1 to the TTY in ASCII form</li>
 </ul>
