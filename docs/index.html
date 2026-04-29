@@ -17,7 +17,7 @@
     </section>
     <section class="info">
         <h1>Current GISC version</h1>
-        <p>The current GISC version is: GISC-1</p>
+        <p>The current GISC version is: GISC-1.2</p>
         <h1>Features:</h1>
         <ul>
             <li>16-bit instruction format</li>
@@ -71,6 +71,7 @@
             <li>GOTO [opcode][address (2 bytes)][times to loop]</li>
             <li>SAVEM [opcode][emptyspace][register][memoryaddr]</li>
             <li>HLT [opcode][emptyspace (3 bytes)]</li>
+            <li>14 - OUT [opcode][emptyspace][emptyspace][register]</li>
         </ol>
     </section>
     <section class="info">
@@ -90,6 +91,7 @@
             <li>b2a4 - GOTO line 2a, 4 times</li>
             <li>c0c3 - Save the contents of register 3 to memory address 12</li>
             <li>d*** - Halt all processes (*** = any number can go here)</li>
+            <li>e**1 - Output the value in register 1 to the TTY in ASCII form</li>
         </ol>
     </section>
     <section class="info">
