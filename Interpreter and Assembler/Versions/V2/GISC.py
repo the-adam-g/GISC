@@ -30,9 +30,9 @@ def interpret():
             case 'MOV':
                 rom.append("40" + str(ins[1]) + str(ins[2]))
             case 'SAVEM':
-                rom.append("50" + str(ins[1]) + format(int(ins[2]), '02x'))
+                rom.append("5" + str(ins[1]) + format(int(ins[2]), '02x'))
             case 'LOADM':
-                rom.append("c0" + format(int(ins[1]), '02x') + str(ins[2]))
+                rom.append("c" + format(int(ins[1]), '02x') + str(ins[2]))
             case 'JMP':
                 rom.append("60" + format(int(ins[1]), '02x'))
             case 'JN':
