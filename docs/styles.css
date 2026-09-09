@@ -64,3 +64,27 @@ video {
     background-color: rgb(237, 239, 241);
     padding: 5px;
 }
+.nav-button {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #E5E7EB;
+    color: #E5E7EB;
+    background-color: #158dee;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: fit-content;
+    margin-top: 2%;
+    transition-duration: 0.35s;
+}
+.nav-button:hover {
+    text-decoration: none;
+    border: 1px solid #1f6feb;
+    color: #1f6feb;
+    background-color: #E5E7EB;
+    transition-duration: 0.35s;
+}
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
