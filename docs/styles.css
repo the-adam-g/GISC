@@ -86,4 +86,5 @@ video {
 .navbar {
     display: flex;
     flex-direction: row;
+    justify-self: center;
 }
